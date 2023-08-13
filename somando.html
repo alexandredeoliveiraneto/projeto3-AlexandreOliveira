@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        body{
+            background-color: #ccc;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        #res{
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>somando valores</h1>
+
+    <input type="number" name="txtn1" id="txtn1"> +
+    <input type="number" name="txtn2" id="txtn2">
+    <input type="button" id="botao" value="somar" onclick="somar()">
+
+    <div id="res">resultado</div>
+
+
+
+
+
+    <script>
+        function somar() {
+
+            const botao = document.getElementById('botao'); 
+            botao.style.background = 'green';
+
+            const tn1 = document.getElementById('txtn1');
+            const n1 = Number(tn1.value);  // converter o valor de tn1 que é string para numero
+
+            const tn2 = document.getElementById('txtn2');
+            const n2 = Number(tn2.value);
+
+            const resultado = document.getElementById('res');
+
+            resultado.innerHTML = `o resultado da soma de ${n1} + ${n2} é igual a <strong>${n1 + n2}</strong>`;
+
+        }
+    </script>
+
+</body>
+</html> 
